@@ -1,15 +1,22 @@
 :root {
-    --airbnb-red: #FF385C;
-    --dark-grey: #222222;
-    --light-grey: #717171;
+    --primary-color: #FF385C;
+    --text-color: #222222;
+    --card-bg: #717171;
     --border-color: #DDDDDD;
-    --bg-light: #F7F7F7;
-    --white: #FFFFFF;
+    --bg-color: #FFFFFF;
     --shadow: 0 6px 16px rgba(0,0,0,0.12);
     --font-main: 'Circular', -apple-system, system-ui, sans-serif;
 }
+.dark{
+    --primary-color: #FF385C;
+    --text-color: #FFFFFF;
+    --card-bg: #1e1e1e;
+    --border-color: #DDDDDD;
+    --bg-color: #222222;
+    --shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
 
-* {s
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,9 +24,9 @@
 
 body {
     font-family: var(--font-main);
-    color: var(--dark-grey);
+    color: var(--text-color);
     line-height: 1.43;
-    background-color: var(--white);
+    background-color: var(--bg-color);
 }
 
 img {
