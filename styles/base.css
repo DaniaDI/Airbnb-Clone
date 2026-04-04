@@ -41,6 +41,10 @@ nav {
   justify-content: space-between;
   padding: 20px 24px;
   border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-color);
 }
 .logo {
   display: flex;
@@ -138,7 +142,53 @@ nav {
   gap: 6px;
   align-items: center;
 }
+footer {
+  background-color: var(--card-bg);
+  padding: 54px;
+}
+.pages-link {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border-color);
+}
+footer h6 {
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+footer p {
+  padding-bottom: 8px;
+}
+.footer a {
+  cursor: pointer;
+}
+.global{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.footer-icon {
+  width: 15px;
+  height: 15px;
+}
+.left-footer,
+.right-footer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.left-footer{
+    font-weight: 500;
+}
 
+.right-footer a:hover {
+  text-decoration: underline;
+}
 @media (max-width: 768px) {
   .left {
     display: none;
@@ -175,5 +225,26 @@ nav {
   }
   .nav-links li {
     border-right: none;
+  }
+  footer {
+    padding: 32px 24px;
+  }
+
+  .pages-link {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 }
