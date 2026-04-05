@@ -194,17 +194,47 @@ nav #logo{
     font-size: 15px;
     margin-bottom: 22px;
 }
-.content .bottom .r-div a{
-    /* width: 300px;
-    height: 60px; */
+.content .bottom .r-div a{ 
     border: none;
-    background-color: var(--primary-color);
     padding: 14px;
     margin-top: 22px;
     color: white; border: none;
-    background-color: var(--primary-color);
-    padding: 17px;
+    background-color:#de3352;
+     padding: 17px 37px;
     text-decoration: none;
-    border-radius: 10px;
-
+    border-radius: 17px;
+    
 }
+
+.review{
+    display: flex;
+    gap:12px;
+    margin-top: 40px;
+    align-items: center;
+    padding-left: 50px;
+}
+@media(max-width:790px){
+    .container{
+         display:flex;
+         flex-direction: column-reverse;
+         align-items: center;
+         align-content: center;
+}
+.side{
+    margin-left:50px;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+ 
+.content .bottom {
+     flex-direction: column;
+     margin-right:180px;
+}
+ /* .side div{
+
+  height:200px;
+  width:200px;
+  border-radius: none;
+  
+}*/
+} 
