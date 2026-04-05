@@ -409,6 +409,18 @@ ul { list-style: none; }
   background: linear-gradient(90deg, var(--bg-secondary) 25%, #2e2e2e 50%, var(--bg-secondary) 75%);
   background-size: 1200px 100%;
 }
+.dark .search-bar-container {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.dark .search-field input {
+  color: var(--text-color);
+}
+
+.dark .search-field:hover {
+  background: var(--bg-color);
+}
 .card-image-wrap.loaded::after { opacity: 0; }
 
 

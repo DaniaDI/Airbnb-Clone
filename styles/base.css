@@ -83,10 +83,12 @@ body {
   transition: background 0.2s ease;
   border: none;
   background: none;
+  cursor: pointer;
 }
 .theme-toggle:hover {
   background: var(--bg-secondary);
 }
+
 
 .icon-sun,
 .icon-moon {
