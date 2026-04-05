@@ -31,6 +31,87 @@ body {
   background-color: var(--bg-color);
 }
 
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 220px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.97);
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  z-index: 200;
+}
+.dropdown-menu.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.dropdown-group {
+  padding: 8px 0;
+}
+.dropdown-item {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--text-color);
+  transition: background 0.15s ease;
+}
+.dropdown-item:hover {
+  background: var(--bg-secondary);
+}
+.dropdown-divider {
+  height: 1px;
+  background: var(--border-color);
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  position: relative;
+  transition: background 0.2s ease;
+  border: none;
+  background: none;
+}
+.theme-toggle:hover {
+  background: var(--bg-secondary);
+}
+
+.icon-sun,
+.icon-moon {
+  position: absolute;
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+}
+.icon-moon {
+  opacity: 0;
+  transform: rotate(-30deg) scale(0.8);
+}
+.icon-sun {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+.dark .icon-sun {
+  opacity: 0;
+  transform: rotate(30deg) scale(0.8);
+}
+.dark .icon-moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
 footer {
   background-color: var(--card-bg);
   padding: 54px;

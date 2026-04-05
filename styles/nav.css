@@ -90,12 +90,12 @@ nav {
 }
 .btn {
   border-radius: 50%;
-  background-color: var(--card-bg);
+  background-color: var(--border-color);
   border: none;
   padding: 8px;
 }
 .btn:hover {
-  background-color: var(--border-color);
+  background-color: #b9b9b9;
 }
 
 .filter,

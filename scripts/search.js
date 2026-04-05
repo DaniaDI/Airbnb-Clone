@@ -9,10 +9,6 @@ const links = document.querySelectorAll('.link');
 const cards = document.querySelectorAll('.card');
 const map = document.querySelector('.map');
 
-
-
-let current = 0;
-
 function sliderInit() {
     for (let i = 0; i < sliders.length; i++) {
         let slides = sliders[i].querySelectorAll('.slide');
