@@ -11,14 +11,24 @@
     <nav>
       <div class="right">
         <div class="logo">
-          <img src="./assets/airbnb.png" alt="Airbnb Logo" />
-          <span>airbnb</span>
+          <a href="./index.html">
+            <img src="./assets/airbnb.png" alt="Airbnb Logo" />
+            <span>airbnb</span>
+          </a>
         </div>
         <ul class="nav-links">
-          <li class="link-main"><a href="">Homes nearby</a></li>
-          <li class="link-sub"><a href="">Any week</a></li>
-          <li class="link-sub"><a href="">Add guests</a></li>
-          <button class="search-btn">
+          <li class="link-main link"><a href="">Homes nearby</a></li>
+          <li class="link-sub link"><a href="">Any week</a></li>
+          <li class="link-sub link"><a href="">Add guests</a></li>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search homes..."
+            oninput="search(this)"
+            onblur="resetSearch()"
+          />
+
+          <button class="search-btn" onclick="searchToggle()">
             <img src="./assets/search.png" alt="Search Icon" class="icon" />
           </button>
         </ul>
@@ -32,11 +42,11 @@
       </div>
       <div class="left">
         <button class="host-btn">Become a host</button>
-        <button class="btn">
+        <a class="btn user" href="./profile.html">
           <img src="./assets/user.png" alt="User Icon" class="icon" />
-        </button>
+        </a>
         <button class="btn">
-          <img src="./assets/menu.png" alt="User Menu Icon" class="icon" />
+          <img src="./assets/menu.png" alt="User Menu Icon" class="icon menu" />
         </button>
       </div>
     </nav>
@@ -44,11 +54,182 @@
       <div class="right-section">
         <h2>Over 1000 homes</h2>
         <div class="container">
-          <div class="card"></div>
+          <div class="card" id="card1">
+            <div class="slider">
+              <button class="slider-btn prev" onclick="changeSlide(this, -1)">
+                &#8249;
+              </button>
+              <button class="favorite" onclick="addToFav(this)">&#9825;</button>
+              <a href="./details.html">
+                <div class="slides">
+                  <img src="./assets/home1.avif" alt="home" class="slide" />
+                  <img src="./assets/home11.avif" alt="home" class="slide" />
+                  <img src="./assets/home12.avif" alt="home" class="slide" />
+                </div>
+              </a>
+              <button class="slider-btn next" onclick="changeSlide(this, 1)">
+                &#8250;
+              </button>
+            </div>
+            <div class="card-info">
+              <div class="title">
+                <h3>guesthouse in Pardes Hanna-Karkur, Israel</h3>
+                <span>&#9733; 4.9(280)</span>
+              </div>
+              <p>Beautiful green garden. ART. Good location</p>
+              <p>1 double bed</p>
+              <p>April 6-11</p>
+              <span
+                ><strong class="value" data-usd="867">$867</strong> for 5
+                night</span
+              >
+            </div>
+          </div>
+
+          <div class="card" id="card2">
+            <div class="slider">
+              <button class="slider-btn prev" onclick="changeSlide(this, -1)">
+                &#8249;
+              </button>
+              <button class="favorite" onclick="addToFav(this)">&#9825;</button>
+              <a href="./details.html">
+                <div class="slides">
+                  <img src="./assets/home2.avif" alt="home" class="slide" />
+                  <img src="./assets/home21.avif" alt="home" class="slide" />
+                  <img src="./assets/home22.avif" alt="home" class="slide" />
+                </div>
+              </a>
+              <button class="slider-btn next" onclick="changeSlide(this, 1)">
+                &#8250;
+              </button>
+            </div>
+            <div class="card-info">
+              <div class="title">
+                <h3>cabin in Gidona, Israel</h3>
+                <span>&#9733; 4.96(45)</span>
+              </div>
+              <p>Maayan Hagilboa</p>
+              <p>1 bedroom . 1 bed</p>
+              <p>April 11-16</p>
+              <span
+                ><strong class="value" data-usd="2786">$2786</strong> for 5
+                night</span
+              >
+            </div>
+          </div>
+
+          <div class="card" id="card3">
+            <div class="slider">
+              <button class="slider-btn prev" onclick="changeSlide(this, -1)">
+                &#8249;
+              </button>
+              <button class="favorite" onclick="addToFav(this)">&#9825;</button>
+              <a href="./details.html">
+                <div class="slides">
+                  <img src="./assets/home3.avif" alt="home" class="slide" />
+                  <img src="./assets/home31.avif" alt="home" class="slide" />
+                  <img src="./assets/home32.avif" alt="home" class="slide" />
+                </div>
+              </a>
+              <button class="slider-btn next" onclick="changeSlide(this, 1)">
+                &#8250;
+              </button>
+            </div>
+            <div class="card-info">
+              <div class="title">
+                <h3>guesthouse in Pardes Hanna-Karkur, Israel</h3>
+                <span>&#9733; 4.98(49)</span>
+              </div>
+              <p>A quiet guest unit with a private yard in Pardes Hanna</p>
+              <p>1 bedroom . 1 double bed</p>
+              <p>April 25-30</p>
+              <span
+                ><strong class="value" data-usd="524">$524</strong> for 5
+                night</span
+              >
+            </div>
+          </div>
+
+          <div class="card" id="card4">
+            <div class="slider">
+              <button class="slider-btn prev" onclick="changeSlide(this, -1)">
+                &#8249;
+              </button>
+              <button class="favorite" onclick="addToFav(this)">&#9825;</button>
+              <a href="./details.html">
+                <div class="slides">
+                  <img src="./assets/home4.avif" alt="home" class="slide" />
+                  <img src="./assets/home41.avif" alt="home" class="slide" />
+                  <img src="./assets/home42.avif" alt="home" class="slide" />
+                </div>
+              </a>
+              <button class="slider-btn next" onclick="changeSlide(this, 1)">
+                &#8250;
+              </button>
+            </div>
+            <div class="card-info">
+              <div class="title">
+                <h3>Dome in Rotem</h3>
+                <span>&#9733; 4.96(23)</span>
+              </div>
+              <p>Nowhere Cabin at the edge of the mountain</p>
+              <p>1 bedroom . 1 bed</p>
+              <p>April 6-11</p>
+              <span
+                ><strong class="value" data-usd="1189">$1189</strong> for 5
+                night</span
+              >
+            </div>
+          </div>
         </div>
       </div>
-      <div class="map"></div>
+      <div class="map">
+        <img src="./assets/map.png" alt="map" class="map-img" />
+        <div
+          class="pin value"
+          data-card="card1"
+          style="top: 30%; left: 40%"
+          onmouseenter="highlight(this)"
+          onmouseleave="removeHighlight(this)"
+          data-usd="867"
+        >
+          $867
+        </div>
+        <div
+          class="pin value"
+          data-card="card2"
+          style="top: 50%; left: 60%"
+          onmouseenter="highlight(this)"
+          onmouseleave="removeHighlight(this)"
+          data-usd="2786"
+        >
+          $2786
+        </div>
+        <div
+          class="pin value"
+          data-card="card3"
+          style="top: 65%; left: 35%"
+          onmouseenter="highlight(this)"
+          onmouseleave="removeHighlight(this)"
+          data-usd="524"
+        >
+          $524
+        </div>
+        <div
+          class="pin value"
+          data-card="card4"
+          style="top: 45%; left: 75%"
+          onmouseenter="highlight(this)"
+          onmouseleave="removeHighlight(this)"
+          data-usd="1189"
+        >
+          $1189
+        </div>
+      </div>
     </section>
+    <div class="togglefav">
+      <p></p>
+    </div>
     <footer>
       <div class="pages-link">
         <div>
@@ -88,17 +269,35 @@
       </div>
       <div class="bottom">
         <div class="right-footer">
-          <span> © 2026 Airbnb,Inc  </span>
+          <span> © 2026 Airbnb,Inc </span>
           <a href=""> .Privacy </a>
           <a href=""> .Terms </a>
           <a href=""> .Your Privacy Choices</a>
         </div>
         <div class="left-footer">
-          <a href="" class="global"><img src="./assets/web.png" class="footer-icon" alt="global"/>English(US)</a>
-          <a href=""> $ USD </a>
-          <a href=""><img src="./assets/facebook.png" alt="facebook" class="footer-icon" /></a>
-          <a href=""><img src="./assets/twitter.png" alt="twitter" class="footer-icon" /></a>
-          <a href=""><img src="./assets/instagram.png" alt="instagram" class="footer-icon" /></a>
+          <a href="" class="global"
+            ><img
+              src="./assets/web.png"
+              class="footer-icon"
+              alt="global"
+            />English(US)</a
+          >
+          <button onclick="USDToIls(this)">$ USD</button>
+          <a href=""
+            ><img
+              src="./assets/facebook.png"
+              alt="facebook"
+              class="footer-icon"
+          /></a>
+          <a href=""
+            ><img src="./assets/twitter.png" alt="twitter" class="footer-icon"
+          /></a>
+          <a href=""
+            ><img
+              src="./assets/instagram.png"
+              alt="instagram"
+              class="footer-icon"
+          /></a>
         </div>
       </div>
     </footer>

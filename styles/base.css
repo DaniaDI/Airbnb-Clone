@@ -5,6 +5,7 @@
   --border-color: #e2e2e2;
   --bg-color: #ffffff;
   --shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  --secondary-text: #717171;
   --font-main: 'Circular', -apple-system, system-ui, sans-serif;
 }
 .dark {
@@ -14,6 +15,7 @@
   --border-color: #dddddd;
   --bg-color: #222222;
   --shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  --secondary-text: #a0a0a0;
 }
 
 * {
@@ -53,6 +55,12 @@ nav {
   font-size: 24px;
   font-weight: 700;
   color: var(--primary-color);
+}
+
+.logo a {
+  display: flex;
+  gap: 6px;
+  align-items: center;
 }
 .logo img {
   width: 32px;
@@ -162,10 +170,10 @@ footer p {
 .footer a {
   cursor: pointer;
 }
-.global{
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.global {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .bottom {
   display: flex;
@@ -182,27 +190,47 @@ footer p {
   gap: 16px;
   align-items: center;
 }
-.left-footer{
-    font-weight: 500;
+.left-footer {
+  font-weight: 500;
 }
 
 .right-footer a:hover {
   text-decoration: underline;
 }
+footer button {
+  border: none;
+  background: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-color);
+}
 @media (max-width: 768px) {
-  .left {
+  .host-btn,
+  .user {
     display: none;
   }
-
   .search-btn {
     display: none;
+  }
+  .right {
+    align-items: center;
   }
 
   .filter span {
     display: none;
   }
   .filter {
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
+    margin-right: 6px;
+    padding: 20px;
+    width: 27px;
+    height: 27px;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
   }
 
   .logo span {
@@ -246,5 +274,8 @@ footer p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
+  }
+  nav {
+    justify-content: center;
   }
 }
